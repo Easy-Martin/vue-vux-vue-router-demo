@@ -1,0 +1,10 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import RouterConfig from 'routers';
+import App from './component/app.vue';
+Vue.use(VueRouter);
+const router = new VueRouter();
+RouterConfig(router);
+sessionStorage.removeItem('index');
+router.replace('/list/type');
+router.start(App,'#root');
