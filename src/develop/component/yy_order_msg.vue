@@ -82,11 +82,6 @@
       return {
         imgUrl:'../src/static/img/2.png',
       }
-    },
-    route:{
-      activate:function(transition){
-        transition.next();
-      }
     }
   }
 </script>

@@ -17,3 +17,41 @@ export const overItem = ({dispatch},...args) =>{
 export const refundItem = ({dispatch},...args) =>{
   return dispatch('REFOUND_ITEM',...args);
 }
+export const initData = ({dispatch},...args) =>{
+  let data = [{
+    name:'个人体检套餐A',
+    hosptical:'宁波市第一人民医院',
+    price:'288',
+    orderNo:'1234567890123456',
+    type:'0',
+    imagePath:'../src/static/img/1.png',
+  },
+  {
+    name:'个人体检套餐B',
+    hosptical:'宁波市第二人民医院',
+    price:'388',
+    orderNo:'1234567890123456',
+    type:'0',
+    imagePath:'../src/static/img/2.png',
+  },
+  {
+    name:'个人体检套餐C',
+    hosptical:'宁波市第三人民医院',
+    price:'388',
+    orderNo:'1234567890123456',
+    type:'0',
+    imagePath:'../src/static/img/1.png',
+  },
+  {
+    name:'个人体检套餐D',
+    hosptical:'宁波市第四人民医院',
+    price:'388',
+    orderNo:'1234567890123456',
+    type:'0',
+    imagePath:'../src/static/img/2.png',
+  }];
+  setTimeout(()=>{
+    return dispatch('INIT_DATA',data);
+  },2000)
+
+}

@@ -26,6 +26,7 @@
 </div>
 </template>
 <script>
+import { initData } from '../vuex/actions';
 export default {
   data(){
     return {
@@ -45,6 +46,14 @@ export default {
         icon:'../src/static/img/a.png'
       }]
     }
+  },
+  vuex:{
+    actions:{
+      initData,
+    }
+  },
+  ready(){
+    this.initData()
   }
 }
 </script>
