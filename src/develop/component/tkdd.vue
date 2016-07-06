@@ -51,6 +51,7 @@
   <div v-if="refundList.length==0" style="text-align:center;color:#999;font-size:14px;padding:15px;">暂无订单</div>
 </template>
 <script>
+  import { getRefoundList } from '../vuex/getters'
   module.exports = {
     data:function(){
       return {
@@ -59,7 +60,7 @@
     },
     vuex:{
       getters:{
-        refundList:({list}) => list.refoundOrder
+        refundList:getRefoundList
       }
     }
 
